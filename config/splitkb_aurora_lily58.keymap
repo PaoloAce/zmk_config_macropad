@@ -15,19 +15,14 @@
 
 / {
     behaviors {
-            tap_dance_ctrl_c_x_v {
-                compatibility = zmk,
-                bindings = <&kp &kp &mo LCTRL>,
-                tap-fast-ms = <300>,
-                tap-slow-ms = <500>,
-                hold-ms = <1000>,
-                config {
-                    tap_dance_action_0 = &kp LCTRL(C);
-                    tap_dance_action_1 = &kp LCTRL(X);
-                    tap_dance_action_2 = &kp LCTRL(V);
-                };
-            };
+        td_mt: tap_dance_mod_tap {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt LC(V) LC(C)>, <&kp LC(X)>;
         };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
