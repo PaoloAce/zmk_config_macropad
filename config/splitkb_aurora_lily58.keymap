@@ -10,7 +10,24 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include "keys_fr.h"
 
+
+
+
 / {
+    behaviors {
+            tap_dance_ctrl_c_x_v {
+                compatibility = zmk,
+                bindings = <&kp &kp &mo LCTRL>,
+                tap-fast-ms = <300>,
+                tap-slow-ms = <500>,
+                hold-ms = <1000>,
+                config {
+                    tap_dance_action_0 = &kp LCTRL(C);
+                    tap_dance_action_1 = &kp LCTRL(X);
+                    tap_dance_action_2 = &kp LCTRL(V);
+                };
+            };
+        };
     keymap {
         compatible = "zmk,keymap";
 
@@ -26,7 +43,7 @@
 &kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                        &kp Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
 &kp LCTRL &kp A  &kp S  &kp D    &kp F    &kp G                        &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
 &kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B  &kp SPACE       &kp RBKT &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                        &kp C_VOL_UP &kp LGUI &kp LALT  &mo 1    &kp RET  &mo 2  &kp BSPC &kp RGUI
+                        &tap_dance_ctrl_c_x_v &kp LGUI &kp LALT  &mo 1    &kp RET  &mo 2  &kp BSPC &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
