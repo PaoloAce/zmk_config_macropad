@@ -30,15 +30,15 @@
 // ------------------------------------------------------------------------------------------------------------
 // |  ESC  |  1  |  2  |  3   |  4   |  5   |                           |  6   |  7    |  8    |  9   |   0   |   )   |
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                           |  Y   |  U    |  I    |  O   |   P   |   =   |
-// |  CTRL |  A  |  S  |  D   |  F   |  G   |                           |  H   |  J    |  K    |  L   |   ;   |   '   |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   | "ctrl_cvx" |      |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-//                     | GUI  | ALT  | LOWER|  BSPC |           | SPACE | RAISE| BSPC  | GUI   |
+// | SHIFT |  A  |  S  |  D   |  F   |  G   |                           |  H   |  J    |  K    |  L   |   ;   |   '   |
+// |  CTRL |  Z  |  X  |  C   |  V   |  B   | "ctrl_cvx" |      |  BSPC |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+//                     | GUI  | ALT  | LOWER|  BSPC      |      | SPACE |RAISE |  DEL  | RALT  |
             bindings = <
 &kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                         &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp MINUS
 &kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                          &kp Y  &kp U    &kp I     &kp O   &kp P    &kp EQUAL
 &kp LSHFT &kp A  &kp S  &kp D    &kp F    &kp G                          &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp LBKT
 &kp LCTRL &kp Z  &kp X  &kp C    &kp V    &kp B  &kp RET       &kp SPACE &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                      &ctrl_c_v_x &kp LGUI &kp LALT &mo 1      &mo 2  &kp BSPC  &kp DEL  &kp RALT
+                      &ctrl_c_v_x &kp LGUI &kp LALT &mo 1      &mo 2  &kp DEL  &kp RALT  &kp BSPC
 
             >;
 
@@ -47,17 +47,17 @@
 
         lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-// |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  7   |  8    |  9   |  F10 |  F11  |  F12  |
-// |   `   |  !  |  @  |  #   |  $   |  %   |                   |  4   |  5    |  6    |  (   |   )   |   ~   |
-// |       |     |     |      |      |      |        |  |       |  1   |  2    |  3    |  {   |   }   |  "|"  |
-//                     |      |      |      |        |  |       |      |       |       |
+// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |      |      |       |       |
+// |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  7   |  8    |  9   |  0   |  F11  |  F12  |
+// |   `   |  !  |  @  |  #   |  $   |  %   |                   |  4   |  5    |  6   |  (   |   )   |   ~   |
+// |       |     |     |      |      |      |        |  |       |  1   |  2    |  3   |  {   |   }   |  "|"  |
+//                     |      |      |      |        |  |       |      |       |      |
             bindings = <
-&bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                     &trans      &trans      &trans      &trans    &trans    &trans
-&kp F1     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                           &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp N0    &trans    &kp SQT
-&trans     &trans           &trans            &trans            &trans       &trans                           &kp KP_N4   &kp KP_N5   &kp KP_N6   &trans    &kp UP    &kp BSLH
-&trans     &ext_power EP_ON &ext_power EP_OFF &trans            &trans       &trans    &trans   &kp LC(RA(DEL))  &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp LEFT  &kp DOWN  &kp RIGHT
-                                              &trans            &trans       &trans    &trans   &trans    &kp HOME &kp END  &trans
+&bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                      &kp KP_N7   &kp KP_N8   &kp KP_N9     &kp FR_PLUS    &kp FR_MINUS   &trans
+&trans     &trans           &trans            &trans            &trans       &trans                            &kp KP_N4   &kp KP_N5   &kp KP_N6     &kp FR_STAR    &kp FR_FSLH    &kp SQT
+&trans     &kp FR_LT        &kp FR_GT         &trans            &trans       &trans                            &kp KP_N1   &kp KP_N2   &kp KP_N3     &trans         &kp UP         &kp BSLH
+&trans     &ext_power EP_ON &ext_power EP_OFF &trans            &trans       &trans    &trans          &trans  &kp KP_N0   &kp FR_DOT  &kp FR_EQUAL  &kp LEFT       &kp DOWN       &kp RIGHT
+                                              &trans            &trans       &trans    &trans          &trans  &kp HOME    &kp END     &kp LC(LA(DEL))
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -72,9 +72,9 @@
 //                     |      |      |      |        |  |       |      |       |       |
             bindings = <
 &trans    &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
-&kp GRAVE &kp N1 &kp N2 &kp N3  &kp N4  &kp N5                       &kp N6      &kp N7    &kp N8    &kp N9   &kp N0    &trans
-&kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &trans      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &trans
-&kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &trans   &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp BSLH
+&trans    &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
+&kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &trans      &trans    &trans    &trans   &trans    &kp FR_PERCENT
+&kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &trans   &trans    &trans      &trans    &trans    &trans   &trans    &trans
                         &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans
             >;
 
