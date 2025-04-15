@@ -34,11 +34,11 @@
 // |  CTRL |  Z  |  X  |  C   |  V   |  B   | "ctrl_cvx" |      |  BSPC |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //                     | GUI  | ALT  | LOWER|  BSPC      |      | SPACE |RAISE |  DEL  | RALT  |
             bindings = <
-&kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                         &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp MINUS
-&kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                          &kp Y  &kp U    &kp I     &kp O   &kp P    &kp EQUAL
-&kp LSHFT &kp A  &kp S  &kp D    &kp F    &kp G                          &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp LBKT
-&kp LCTRL &kp Z  &kp X  &kp C    &kp V    &kp B  &kp RET       &kp SPACE &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                      &ctrl_c_v_x &kp LGUI &kp LALT &mo 1      &mo 2  &kp DEL  &kp RALT  &kp BSPC
+&kp ESC   &kp N2     &kp N7     &kp N3       &kp N4     &kp EQUAL                         &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp MINUS
+&kp TAB   &kp LC(Q)  &kp LC(W)  &kp E        &kp N5     &kp MINUS                          &kp Y  &kp U    &kp I     &kp O   &kp P    &kp EQUAL
+&kp LSHFT &kp LC(S)  &kp LC(K)  &kp LC(Z)    &kp DOT    &kp COMMA                          &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp LBKT
+&kp LCTRL &kp LC(N)  &kp LC(X)  &kp LC(C)    &kp M      &kp FSLH  &kp RET       &kp SPACE &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+                              &ctrl_c_v_x    &kp LGUI   &kp LALT  &mo 1        &mo 2  &kp DEL  &kp RALT  &kp BSPC
 
             >;
 
