@@ -22,6 +22,15 @@
             bindings = <&mt LC(X) LC(C)>, <&kp LC(V)>;
         };
     };
+    
+    combos {
+        compatible = "zmk,combos";
+        combo_del {
+            timeout-ms = <50>;
+            key-positions = <36 42>;
+            bindings = <&kp DEL>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -32,13 +41,13 @@
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                           |  Y   |  U    |  I    |  O   |   P   |   =   |
 // | SHIFT |  A  |  S  |  D   |  F   |  G   |                           |  H   |  J    |  K    |  L   |   ;   |   '   |
 // |  CTRL |  Z  |  X  |  C   |  V   |  B   | "ctrl_cvx" |      |  BSPC |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-//                     | GUI  | ALT  | LOWER|  BSPC      |      | SPACE |RAISE |  DEL  | RALT  |
+//                     | GUI  | ALT  | LOWER|  RETURN    |      | SPACE |RAISE |  DEL  | RALT  |
             bindings = <
-&kp ESC   &kp N2        &kp N7        &kp N3          &kp N4            &kp EQUAL                         &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp MINUS
-&kp TAB   &kp LC(FR_A)  &kp LC(FR_Z)  &kp FR_E        &kp N5            &kp MINUS                          &kp Y  &kp U    &kp I     &kp O   &kp P    &kp EQUAL
-&kp LSHFT &kp LC(FR_S)  &kp LC(FR_K)  &kp LC(FR_T)    &kp FR_COMMA      &kp FR_DOT                           &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp LBKT
-&kp LCTRL &kp LC(FR_W)  &kp LC(FR_B)  &kp LC(FR_N)    &kp FR_COLON      &kp FR_EXCL  &kp RET       &kp SPACE &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                              &ctrl_c_v_x    &kp LGUI   &kp LALT  &mo 1 &mo 2        &kp DEL       &kp RALT  &kp BSPC
+&kp ESC   &kp N2        &kp N7            &kp N3          &kp N4        &kp EQUAL                         &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp MINUS
+&kp TAB   &kp LC(FR_A)  &kp LC(FR_Z)      &kp FR_E        &kp N5        &kp MINUS                          &kp Y  &kp U    &kp I     &kp O   &kp P    &kp EQUAL
+&kp LSHFT &kp LC(FR_S)  &kp LC(LS(FR_K))  &kp LC(FR_T)    &kp M         &kp COMMA                           &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp LBKT
+&kp LCTRL &kp LC(FR_W)  &kp LC(FR_B)      &kp LC(FR_N)    &kp DOT       &kp FSLH   &lt 2 RET       &kp SPACE &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+                                          &ctrl_c_v_x     &kp LGUI      &kp LALT   &lt 1 BSPC        &kp RALT  &kp BSPC &mo 2 &RALT
 
             >;
 
@@ -53,11 +62,11 @@
 // |       |     |     |      |      |      |        |  |       |  1   |  2    |  3   |  {   |   }   |  "|"  |
 //                     |      |      |      |        |  |       |      |       |      |
             bindings = <
-&bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                      &kp FR_N7   &kp FR_N8   &kp FR_N9     &kp FR_PLUS    &kp FR_MINUS   &trans
-&trans     &trans           &trans            &kp UP            &trans       &trans                            &kp FR_N4   &kp FR_N5   &kp FR_N6     &kp FR_STAR    &kp FR_FSLH    &kp SQT
-&trans     &kp FR_LT        &kp LEFT         &kp DOWN            &kp RIGHT       &trans                            &kp FR_N1   &kp FR_N2   &kp FR_N3     &trans         &kp UP         &kp BSLH
-&trans     &ext_power EP_ON &ext_power EP_OFF &trans            &trans       &trans    &trans          &trans  &kp FR_N0   &kp FR_DOT  &kp FR_EQUAL  &kp LEFT       &kp DOWN       &kp RIGHT
-                                              &trans            &trans       &trans    &trans          &trans  &kp HOME    &kp END     &kp LC(LA(DEL))
+&LC(LA(DEL)) &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2      &kp FR_LBRC    &kp FR_LBRC                      &kp FR_N7   &kp FR_N8   &kp FR_N9     &kp FR_PLUS    &kp FR_MINUS   &trans
+&bt BT_CLR   &HOME           &kp UP            &kp END           &kp FR_LBKT    &kp FR_RBKT                            &kp FR_N4   &kp FR_N5   &kp FR_N6     &kp FR_STAR    &kp FR_FSLH    &kp SQT
+&trans       &kp LEFT        &kp DOWN          &kp RIGHT         &kp RIGHT      &trans                            &kp FR_N1   &kp FR_N2   &kp FR_N3     &trans         &kp UP         &kp BSLH
+&trans       &ext_power EP_ON &ext_power EP_OFF &trans            &trans       &trans    &trans          &trans  &kp FR_N0   &kp FR_DOT  &kp FR_EQUAL  &kp LEFT       &kp DOWN       &kp RIGHT
+                                                &trans            &trans       &trans    &trans          &trans  &kp HOME    &kp END     &kp LC(LA(DEL))
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
