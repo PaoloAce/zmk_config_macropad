@@ -33,7 +33,7 @@
     combo_bcsp {
             timeout-ms = <50>;
             key-positions = <36 53>;
-            bindings = <&kp DEL>;
+            bindings = <&kp BSPC>;
         };
     };
 
