@@ -63,11 +63,11 @@
 //                     |      |      |      |        |  |       |      |       |      |
             bindings = <
 &kp LC(LA(DEL)) &trans          &trans            &trans      &kp FR_LBRC    &kp FR_LBRC                      &kp FR_N7   &kp FR_N8   &kp FR_N9     &kp FR_PLUS    &kp FR_MINUS   &trans
-&bt BT_CLR      &HOME           &kp UP            &kp END           &kp FR_LBKT    &kp FR_RBKT                            &kp FR_N4   &kp FR_N5   &kp FR_N6     &kp FR_STAR    &kp FR_FSLH    &kp SQT
-&bt BT_SEL 0    &kp LEFT        &kp DOWN          &kp RIGHT         &kp RIGHT      &trans                            &kp FR_N1   &kp FR_N2   &kp FR_N3     &trans         &kp UP         &kp BSLH
-&bt BT_SEL 1    &ext_power EP_ON &ext_power EP_OFF &trans            &trans       &trans    &trans          &trans  &kp FR_N0   &kp FR_DOT  &kp FR_EQUAL  &kp LEFT       &kp DOWN       &kp RIGHT
-                                                &trans            &trans       &trans    &trans          &trans  &kp HOME    &kp END     &kp LC(LA(DEL))
-            >;
+&bt BT_CLR      &kp HOME        &kp UP            &kp END     &kp FR_LBKT    &kp FR_RBKT                            &kp FR_N4   &kp FR_N5   &kp FR_N6     &kp FR_STAR    &kp FR_FSLH    &kp SQT
+&bt BT_SEL 0    &kp LEFT        &kp DOWN          &kp RIGHT   &kp RIGHT      &trans                            &kp FR_N1   &kp FR_N2   &kp FR_N3     &trans         &kp UP         &kp BSLH
+&bt BT_SEL 1    &ext_power EP_ON &ext_power EP_OFF &trans     &trans         &trans    &trans          &trans  &kp FR_N0   &kp FR_DOT  &kp FR_EQUAL  &kp LEFT       &kp DOWN       &kp RIGHT
+                                                 &trans       &trans         &trans    &trans          &trans  &kp HOME    &kp END     &kp LC(LA(DEL))
+            >; 
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
