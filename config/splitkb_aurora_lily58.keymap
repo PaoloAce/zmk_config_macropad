@@ -34,11 +34,11 @@
 // |  CTRL |  Z  |  X  |  C   |  V   |  B   | "ctrl_cvx" |      |  BSPC |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //                     | GUI  | ALT  | LOWER|  BSPC      |      | SPACE |RAISE |  DEL  | RALT  |
             bindings = <
-&kp ESC   &kp N2     &kp N7     &kp N3       &kp N4     &kp EQUAL                         &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp MINUS
-&kp TAB   &kp LC(Q)  &kp LC(W)  &kp E        &kp N5     &kp MINUS                          &kp Y  &kp U    &kp I     &kp O   &kp P    &kp EQUAL
-&kp LSHFT &kp LC(S)  &kp LC(K)  &kp LC(Z)    &kp DOT    &kp COMMA                          &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp LBKT
-&kp LCTRL &kp LC(N)  &kp LC(X)  &kp LC(C)    &kp M      &kp FSLH  &kp RET       &kp SPACE &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                              &ctrl_c_v_x    &kp LGUI   &kp LALT  &mo 1        &mo 2  &kp DEL  &kp RALT  &kp BSPC
+&kp ESC   &kp N2        &kp N7        &kp N3          &kp N4            &kp EQUAL                         &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp MINUS
+&kp TAB   &kp LC(FR_A)  &kp LC(FR_Z)  &kp FR_E        &kp N5            &kp MINUS                          &kp Y  &kp U    &kp I     &kp O   &kp P    &kp EQUAL
+&kp LSHFT &kp LC(FR_S)  &kp LC(FR_K)  &kp LC(FR_T)    &kp FR_COMMA      &kp FR_DOT                           &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp LBKT
+&kp LCTRL &kp LC(FR_W)  &kp LC(FR_B)  &kp LC(FR_N)    &kp FR_COLON      &kp FR_EXCL  &kp RET       &kp SPACE &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+                              &ctrl_c_v_x    &kp LGUI   &kp LALT  &mo 1 &mo 2        &kp DEL       &kp RALT  &kp BSPC
 
             >;
 
@@ -54,8 +54,8 @@
 //                     |      |      |      |        |  |       |      |       |      |
             bindings = <
 &bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                      &kp FR_N7   &kp FR_N8   &kp FR_N9     &kp FR_PLUS    &kp FR_MINUS   &trans
-&trans     &trans           &trans            &trans            &trans       &trans                            &kp FR_N4   &kp FR_N5   &kp FR_N6     &kp FR_STAR    &kp FR_FSLH    &kp SQT
-&trans     &kp FR_LT        &kp FR_GT         &trans            &trans       &trans                            &kp FR_N1   &kp FR_N2   &kp FR_N3     &trans         &kp UP         &kp BSLH
+&trans     &trans           &trans            &kp UP            &trans       &trans                            &kp FR_N4   &kp FR_N5   &kp FR_N6     &kp FR_STAR    &kp FR_FSLH    &kp SQT
+&trans     &kp FR_LT        &kp LEFT         &kp DOWN            &kp RIGHT       &trans                            &kp FR_N1   &kp FR_N2   &kp FR_N3     &trans         &kp UP         &kp BSLH
 &trans     &ext_power EP_ON &ext_power EP_OFF &trans            &trans       &trans    &trans          &trans  &kp FR_N0   &kp FR_DOT  &kp FR_EQUAL  &kp LEFT       &kp DOWN       &kp RIGHT
                                               &trans            &trans       &trans    &trans          &trans  &kp HOME    &kp END     &kp LC(LA(DEL))
             >;
@@ -72,8 +72,8 @@
 //                     |      |      |      |        |  |       |      |       |       |
             bindings = <
 &trans    &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
-&trans    &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
-&kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &trans      &trans    &trans    &trans   &trans    &kp FR_PERCENT
+&trans    &trans &trans &trans  &kp FR_N6  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
+&kp F1    &kp F2 &kp FR_N1 &kp FR_N2  &kp FR_N3  &kp F6                       &trans      &trans    &trans    &trans   &trans    &kp FR_PERCENT
 &kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &trans   &trans    &trans      &trans    &trans    &trans   &trans    &trans
                         &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans
             >;
