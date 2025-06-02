@@ -45,13 +45,13 @@
 // |  ESC  |  CTRL+W  |    IMPR     |    "      |  '   |  =   |                           |  6   |  7    |  8    |  9   |   0   |   )   |
 // |  TAB  |  CTRL+A  |  CRTRL+Z    |    E      |  (   |  )   |                           |  Y   |  U    |  I    |  O   |   P   |   =   |
 // | SHIFT |  CTRL+S  |  MTRL+MAJ+K |  CTRL+T   |  ;   |  !   |                           |  H   |  J    |  K    |  L   |   ;   |   '   |
-// |  CTRL |  Z       |  CTRL+B     |  CTRL+N   |  ,   |  :   | "ctrl_cvx" |      |  BSPC |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+// |  CTRL |  CTRL+D  |  CTRL+B     |  CTRL+N   |  ,   |  :   | "ctrl_cvx" |      |  BSPC |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //                                  | GUI       | ALT  | BSPC | RETURN     |      | BSPACE | RETURN | DEL  | RALT  |
             bindings = <
 &kp ESC   &kp LC(FR_W)  &kp LS(LG(S))     &kp N3          &kp N4        &kp EQUAL                         &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp MINUS
 &kp TAB   &kp LC(FR_A)  &kp LC(FR_Z)      &kp FR_E        &kp N5        &kp MINUS                          &kp Y  &kp U    &kp I     &kp O   &kp P    &kp EQUAL
 &kp LSHFT &kp LC(FR_S)  &kp LC(LS(FR_K))  &kp LC(FR_T)    &kp M         &kp COMMA                           &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp LBKT
-&kp LCTRL &kp LC(FR_W)  &kp LC(FR_B)      &kp LC(FR_N)    &kp DOT       &kp FSLH   &lt 2 RET       &kp SPACE &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+&kp LCTRL &kp LC(FR_D)  &kp LC(FR_B)      &kp LC(FR_N)    &kp DOT       &kp FSLH   &lt 2 RET       &kp SPACE &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
                                           &ctrl_c_v_x     &kp LGUI      &kp LALT   &lt 1 BSPC        &kp RALT  &kp BSPC &mo 2 &kp RALT
 
             >;
